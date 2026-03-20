@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript let Statement</title>
+</head>
+
+<body>
+
+<h2>JavaScript let Statement Demo</h2>
+
+<script>
+
+    /* =========================================================
+       1. What is let?
+       ---------------------------------------------------------
+       The 'let' keyword is used to declare variables in JavaScript.
+       It was introduced in ES6 (2015).
+
+       Variables declared with let:
+       ✔ Have block scope
+       ✔ Cannot be redeclared in the same scope
+       ✔ Are safer than var
+    ========================================================= */
+
+    // Variable Declaration with let
+    let name = "John";
+    let age = 35;
+    let isStudent = true;
+
+    document.write("Name: " + name + "<br>");
+    document.write("Age: " + age + "<br>");
+    document.write("Is Student: " + isStudent + "<br><br>");
+
+
+    /* =========================================================
+       2. Block Scope
+       ---------------------------------------------------------
+       A variable declared with let is only accessible inside
+       the block { } in which it is defined.
+    ========================================================= */
+
+    {
+        let x = "Inside Block";
+        document.write("Block Scope x: " + x + "<br>");
+    }
+
+    // document.write(x); ❌ ERROR (x is not defined outside block)
+
+
+    /* =========================================================
+       3. Function Scope vs Block Scope
+       ---------------------------------------------------------
+       let → block scope
+       var → function scope
+    ========================================================= */
+
+    function testScope() {
+        if (true) {
+            let a = 5;   // block scope
+            var b = 10;  // function scope
+
+            document.write("Inside block a: " + a + "<br>");
+            document.write("Inside block b: " + b + "<br>");
+        }
+
+        // document.write(a); ❌ ERROR (a is block scoped)
+        document.write("Outside block b: " + b + "<br><br>");
+    }
+
+    testScope();
+
+
+    /* =========================================================
+       4. Hoisting
+       ---------------------------------------------------------
+       Hoisting means JavaScript moves variable declarations
+       to the top of the scope before execution.
+
+       ✔ var supports hoisting
+       ❌ let does NOT support hoisting (Temporal Dead Zone)
+    ========================================================= */
+
+    function testHoisting() {
+
+        // var supports hoisting
+        n = 50;
+        document.write("n = " + n + "<br>");
+        var n;
+
+        // let does NOT support hoisting
+        // Uncommenting below will cause ERROR
+
+        /*
+        m = 100;
+        document.write("m = " + m + "<br>");
+        let m;
+        */
+    }
+
+    testHoisting();
+
+</script>
+
+</body>
+</html>

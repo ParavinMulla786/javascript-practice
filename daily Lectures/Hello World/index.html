@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello World Program</title>
+</head>
+
+<body>
+
+    <!-- Using innerHTML -->
+    <!-- The innerHTML property of an HTML element defines the HTML content of the element. We can use this property to
+    display the Hello World message. By changing the innerHTML property of the element, we can display the message in
+    HTML document or webpage.
+
+    To use innerHTML property of an element, we need to access that element first. We can use document.getElementById()
+    method to access the element. -->
+
+     <div id = "output"> </div>
+
+    <script>
+
+        // Using document.write()
+        //  The document.write() method writes the content (a string of text) directly to the HTML document or web page.
+
+        document.write("Hello World")
+
+
+
+        //   Using alert() method
+        //   We can use the window alert() method to print "Hello Word" in a dialogue box.
+        //   The alert() is a window method that instruct the browser to display an alert box with the message. We can write alert without passing any message to it.
+
+        alert("Hello World")
+
+
+        //   Using console.log()
+        //   The console.log() is a very convenient method to print the message to web Console.It is very useful to debug the JavaScript codes in the browsers.Let's look at the simple application of the console.log() to print the "Hello World" to the web console.
+
+        console.log("Hello World")
+
+
+    //     <!-- Using innerHTML -->
+    // <!-- The innerHTML property of an HTML element defines the HTML content of the element. We can use this property to
+    // display the Hello World message. By changing the innerHTML property of the element, we can display the message in
+    // HTML document or webpage.
+
+    // To use innerHTML property of an element, we need to access that element first. We can use document.getElementById()
+    // method to access the element. -->
+
+    document.getElementById("output").innerHTML = "Hello World";
+
+    </script>
+</body>
+
+</html>

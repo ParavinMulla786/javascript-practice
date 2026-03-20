@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript Data Types</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            background: #f4f6f8;
+            padding: 20px;
+            line-height: 1.6;
+        }
+
+        .box {
+            background: white;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+
+        th {
+            background: #007bff;
+            color: white;
+        }
+
+        pre {
+            background: #222;
+            color: #0f0;
+            padding: 15px;
+            border-radius: 8px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+
+<!-- ===================== -->
+<!-- DATA TYPES -->
+<!-- ===================== -->
+
+<div class="box">
+    <h1>📘 JavaScript Data Types</h1>
+
+    <h2>🔹 Types of Data Types</h2>
+
+    <ul>
+        <li><b>Primitive Data Types</b>
+            <ul>
+                <li>String</li>
+                <li>Number</li>
+                <li>Boolean</li>
+                <li>Undefined</li>
+                <li>Null</li>
+                <li>BigInt</li>
+                <li>Symbol</li>
+            </ul>
+        </li>
+
+        <li><b>Non-Primitive Data Types</b>
+            <ul>
+                <li>Object</li>
+                <li>Array</li>
+                <li>Function</li>
+            </ul>
+        </li>
+    </ul>
+
+    <h2>🔹 Explanation</h2>
+
+    <ul>
+        <li><b>String:</b> Text inside quotes ("Hello")</li>
+        <li><b>Number:</b> Integer & decimal (10, 10.5)</li>
+        <li><b>Boolean:</b> true / false</li>
+        <li><b>Undefined:</b> Variable declared but not assigned</li>
+        <li><b>Null:</b> Intentional empty value</li>
+        <li><b>Object:</b> Key-value pair collection</li>
+        <li><b>Array:</b> Ordered list</li>
+        <li><b>Function:</b> Reusable block of code</li>
+        <li><b>BigInt:</b> Large numbers</li>
+        <li><b>Symbol:</b> Unique identifier</li>
+    </ul>
+
+    <h2>🔹 Examples</h2>
+
+    <pre>
+let str = "Hello";        // String
+let num = 100;            // Number
+let bool = true;          // Boolean
+let x;                    // Undefined
+let y = null;             // Null
+
+let obj = {name:"John"};  // Object
+let arr = [1,2,3];        // Array
+
+function test() {         // Function
+    return "Hi";
+}
+
+let big = 123456789n;     // BigInt
+let sym = Symbol("id");   // Symbol
+    </pre>
+</div>
+
+
+<!-- ===================== -->
+<!-- TYPE CHECKING -->
+<!-- ===================== -->
+
+<div class="box">
+    <h1>📘 Type Checking</h1>
+
+    <pre>
+typeof "Hello"   // string
+typeof 10        // number
+typeof true      // boolean
+typeof undefined // undefined
+typeof null      // object (JS bug)
+typeof {}        // object
+typeof []        // object
+typeof function(){} // function
+    </pre>
+</div>
+
+
+<!-- ===================== -->
+<!-- VAR LET CONST -->
+<!-- ===================== -->
+
+<div class="box">
+    <h1>📘 var vs let vs const</h1>
+
+    <table>
+        <tr>
+            <th>Keyword</th>
+            <th>Scope</th>
+            <th>Redeclare</th>
+            <th>Reassign</th>
+        </tr>
+        <tr>
+            <td>var</td>
+            <td>Function</td>
+            <td>Yes</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>let</td>
+            <td>Block</td>
+            <td>No</td>
+            <td>Yes</td>
+        </tr>
+        <tr>
+            <td>const</td>
+            <td>Block</td>
+            <td>No</td>
+            <td>No</td>
+        </tr>
+    </table>
+
+    <h2>🔹 Examples</h2>
+
+    <pre>
+// var
+var a = 10;
+var a = 20; // allowed
+
+// let
+let b = 10;
+// let b = 20; ❌ error
+b = 30;
+
+// const
+const c = 10;
+// c = 20; ❌ error
+    </pre>
+</div>
+
+
+<!-- ===================== -->
+<!-- HOISTING -->
+<!-- ===================== -->
+
+<div class="box">
+    <h1>📘 Hoisting</h1>
+
+    <p>Hoisting means variables are moved to the top during execution.</p>
+
+    <pre>
+console.log(a);
+var a = 10;   // undefined (hoisted)
+
+console.log(b);
+let b = 10;   // ❌ error (TDZ)
+    </pre>
+</div>
+
+
+<!-- ===================== -->
+<!-- INTERVIEW QUESTIONS -->
+<!-- ===================== -->
+
+<div class="box">
+    <h1>🎯 Interview Questions & Answers</h1>
+
+    <h2>1. What are data types in JavaScript?</h2>
+    <p>Data types define the type of data a variable can hold (string, number, boolean, etc.).</p>
+
+    <h2>2. Difference between null and undefined?</h2>
+    <ul>
+        <li>undefined → variable declared but not assigned</li>
+        <li>null → intentionally empty value</li>
+    </ul>
+
+    <h2>3. Why typeof null is object?</h2>
+    <p>This is a known bug in JavaScript.</p>
+
+    <h2>4. Difference between var, let, const?</h2>
+    <p>var → function scope, let & const → block scope</p>
+
+    <h2>5. What is hoisting?</h2>
+    <p>Moving declarations to the top of scope.</p>
+
+    <h2>6. Can const object be modified?</h2>
+    <p>Yes, properties can change but reference cannot.</p>
+
+    <pre>
+const obj = {name:"A"};
+obj.name = "B"; // ✅ allowed
+    </pre>
+
+    <h2>7. What is block scope?</h2>
+    <p>Scope limited to {} block.</p>
+
+    <h2>8. Difference between == and ===?</h2>
+    <ul>
+        <li>== → checks value</li>
+        <li>=== → checks value + type</li>
+    </ul>
+
+    <h2>9. Is array an object?</h2>
+    <p>Yes, array is a special type of object.</p>
+
+    <h2>10. What is BigInt?</h2>
+    <p>Used for very large numbers beyond Number limit.</p>
+
+</div>
+
+</body>
+</html>
