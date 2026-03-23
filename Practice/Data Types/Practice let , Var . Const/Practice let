@@ -1,0 +1,7 @@
+// Create a variable with your favorite color
+let color = "voilet";
+console.log("Favorite color:", color);
+
+// Change it to another color
+color = "pink";
+console.log("Changed color:", color);
