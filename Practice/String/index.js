@@ -9,3 +9,8 @@ console.log(ptwo);
 let fruit = "PineApple, Mango , Orange";
 let fruitsCollection = fruit.split();
 console.log(fruitsCollection);
+
+
+
+//6
+let str = "success is the sum of small efforts";
