@@ -3,36 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JavaScript Data Types</title>
+
+    <title>JavaScript Basics Guide</title>
 
     <style>
+        /* ===== Global Styles ===== */
         body {
-            font-family: Arial;
-            background: #f4f6f8;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #eef2f7;
             padding: 20px;
             line-height: 1.6;
         }
 
+        h1 {
+            color: #222;
+        }
+
+        h2 {
+            color: #444;
+            margin-top: 10px;
+        }
+
+        /* ===== Card Box Design ===== */
         .box {
-            background: white;
+            background: #fff;
             padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            margin-bottom: 25px;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition: 0.3s;
         }
 
-        h1, h2 {
-            color: #333;
+        .box:hover {
+            transform: scale(1.01);
         }
 
+        /* ===== Table Styling ===== */
         table {
             width: 100%;
             border-collapse: collapse;
+            margin-top: 10px;
         }
 
         th, td {
             border: 1px solid #ddd;
-            padding: 10px;
+            padding: 12px;
             text-align: center;
         }
 
@@ -41,25 +56,35 @@
             color: white;
         }
 
+        /* ===== Code Block ===== */
         pre {
-            background: #222;
-            color: #0f0;
+            background: #1e1e1e;
+            color: #00ff88;
             padding: 15px;
             border-radius: 8px;
             overflow-x: auto;
+            font-size: 14px;
+        }
+
+        /* ===== List Styling ===== */
+        ul {
+            margin-left: 20px;
+        }
+
+        li {
+            margin-bottom: 5px;
         }
     </style>
 </head>
+
 <body>
 
-<!-- ===================== -->
-<!-- DATA TYPES -->
-<!-- ===================== -->
-
+<!-- ================= DATA TYPES ================= -->
 <div class="box">
+
     <h1>📘 JavaScript Data Types</h1>
 
-    <h2>🔹 Types of Data Types</h2>
+    <h2>🔹 Categories</h2>
 
     <ul>
         <li><b>Primitive Data Types</b>
@@ -83,68 +108,69 @@
         </li>
     </ul>
 
-    <h2>🔹 Explanation</h2>
+    <h2>🔹 Simple Explanation</h2>
 
     <ul>
-        <li><b>String:</b> Text inside quotes ("Hello")</li>
-        <li><b>Number:</b> Integer & decimal (10, 10.5)</li>
+        <li><b>String:</b> Text values → "Hello"</li>
+        <li><b>Number:</b> Numbers → 10, 10.5</li>
         <li><b>Boolean:</b> true / false</li>
-        <li><b>Undefined:</b> Variable declared but not assigned</li>
-        <li><b>Null:</b> Intentional empty value</li>
-        <li><b>Object:</b> Key-value pair collection</li>
-        <li><b>Array:</b> Ordered list</li>
-        <li><b>Function:</b> Reusable block of code</li>
-        <li><b>BigInt:</b> Large numbers</li>
+        <li><b>Undefined:</b> Declared but no value</li>
+        <li><b>Null:</b> Empty value (intentional)</li>
+        <li><b>Object:</b> Data in key-value form</li>
+        <li><b>Array:</b> List of values</li>
+        <li><b>Function:</b> Reusable code block</li>
+        <li><b>BigInt:</b> Very large numbers</li>
         <li><b>Symbol:</b> Unique identifier</li>
     </ul>
 
-    <h2>🔹 Examples</h2>
+    <h2>🔹 Example Code</h2>
 
-    <pre>
-let str = "Hello";        // String
-let num = 100;            // Number
-let bool = true;          // Boolean
-let x;                    // Undefined
-let y = null;             // Null
+<pre>
+// Primitive Types
+let name = "John";     // String
+let age = 25;          // Number
+let isActive = true;   // Boolean
+let x;                 // Undefined
+let y = null;          // Null
 
-let obj = {name:"John"};  // Object
-let arr = [1,2,3];        // Array
+// Non-Primitive
+let user = {name: "John"};  // Object
+let numbers = [1,2,3];      // Array
 
-function test() {         // Function
-    return "Hi";
+function greet() {
+    return "Hello!";
 }
 
-let big = 123456789n;     // BigInt
-let sym = Symbol("id");   // Symbol
-    </pre>
+// Special Types
+let bigNum = 123456789n;    // BigInt
+let id = Symbol("id");      // Symbol
+</pre>
+
 </div>
 
 
-<!-- ===================== -->
-<!-- TYPE CHECKING -->
-<!-- ===================== -->
-
+<!-- ================= TYPE CHECK ================= -->
 <div class="box">
-    <h1>📘 Type Checking</h1>
 
-    <pre>
-typeof "Hello"   // string
-typeof 10        // number
-typeof true      // boolean
-typeof undefined // undefined
-typeof null      // object (JS bug)
-typeof {}        // object
-typeof []        // object
+    <h1>📘 Type Checking (typeof)</h1>
+
+<pre>
+typeof "Hello"      // string
+typeof 10           // number
+typeof true         // boolean
+typeof undefined    // undefined
+typeof null         // object (JS bug)
+typeof {}           // object
+typeof []           // object
 typeof function(){} // function
-    </pre>
+</pre>
+
 </div>
 
 
-<!-- ===================== -->
-<!-- VAR LET CONST -->
-<!-- ===================== -->
-
+<!-- ================= VAR LET CONST ================= -->
 <div class="box">
+
     <h1>📘 var vs let vs const</h1>
 
     <table>
@@ -156,109 +182,91 @@ typeof function(){} // function
         </tr>
         <tr>
             <td>var</td>
-            <td>Function</td>
+            <td>Function Scope</td>
             <td>Yes</td>
             <td>Yes</td>
         </tr>
         <tr>
             <td>let</td>
-            <td>Block</td>
+            <td>Block Scope</td>
             <td>No</td>
             <td>Yes</td>
         </tr>
         <tr>
             <td>const</td>
-            <td>Block</td>
+            <td>Block Scope</td>
             <td>No</td>
             <td>No</td>
         </tr>
     </table>
 
-    <h2>🔹 Examples</h2>
-
-    <pre>
+<pre>
 // var
 var a = 10;
 var a = 20; // allowed
 
 // let
 let b = 10;
-// let b = 20; ❌ error
-b = 30;
+b = 30; // allowed
 
 // const
 const c = 10;
-// c = 20; ❌ error
-    </pre>
+// c = 20; ❌ not allowed
+</pre>
+
 </div>
 
 
-<!-- ===================== -->
-<!-- HOISTING -->
-<!-- ===================== -->
-
+<!-- ================= HOISTING ================= -->
 <div class="box">
+
     <h1>📘 Hoisting</h1>
 
-    <p>Hoisting means variables are moved to the top during execution.</p>
+    <p><b>Definition:</b> JavaScript moves variable declarations to the top.</p>
 
-    <pre>
-console.log(a);
-var a = 10;   // undefined (hoisted)
+<pre>
+// var (hoisted)
+console.log(a); // undefined
+var a = 10;
 
-console.log(b);
-let b = 10;   // ❌ error (TDZ)
-    </pre>
+// let (TDZ - Error)
+console.log(b); // ❌ error
+let b = 10;
+</pre>
+
 </div>
 
 
-<!-- ===================== -->
-<!-- INTERVIEW QUESTIONS -->
-<!-- ===================== -->
-
+<!-- ================= INTERVIEW ================= -->
 <div class="box">
-    <h1>🎯 Interview Questions & Answers</h1>
 
-    <h2>1. What are data types in JavaScript?</h2>
-    <p>Data types define the type of data a variable can hold (string, number, boolean, etc.).</p>
+    <h1>🎯 Interview Questions</h1>
 
-    <h2>2. Difference between null and undefined?</h2>
+    <h2>1. What are Data Types?</h2>
+    <p>They define what kind of value a variable can store.</p>
+
+    <h2>2. null vs undefined?</h2>
     <ul>
-        <li>undefined → variable declared but not assigned</li>
-        <li>null → intentionally empty value</li>
+        <li>undefined → no value assigned</li>
+        <li>null → intentionally empty</li>
     </ul>
 
-    <h2>3. Why typeof null is object?</h2>
-    <p>This is a known bug in JavaScript.</p>
+    <h2>3. Why typeof null = object?</h2>
+    <p>This is a JavaScript bug.</p>
 
-    <h2>4. Difference between var, let, const?</h2>
+    <h2>4. var vs let vs const?</h2>
     <p>var → function scope, let & const → block scope</p>
 
     <h2>5. What is hoisting?</h2>
-    <p>Moving declarations to the top of scope.</p>
+    <p>Variables are moved to top during execution.</p>
 
-    <h2>6. Can const object be modified?</h2>
-    <p>Yes, properties can change but reference cannot.</p>
+    <h2>6. Can const object change?</h2>
+    <p>Yes, properties can change.</p>
 
-    <pre>
-const obj = {name:"A"};
-obj.name = "B"; // ✅ allowed
-    </pre>
-
-    <h2>7. What is block scope?</h2>
-    <p>Scope limited to {} block.</p>
-
-    <h2>8. Difference between == and ===?</h2>
-    <ul>
-        <li>== → checks value</li>
-        <li>=== → checks value + type</li>
-    </ul>
-
-    <h2>9. Is array an object?</h2>
-    <p>Yes, array is a special type of object.</p>
-
-    <h2>10. What is BigInt?</h2>
-    <p>Used for very large numbers beyond Number limit.</p>
+<pre>
+const obj = {name: "A"};
+obj.name = "B"; // allowed
+</pre>
 
 </div>
 
