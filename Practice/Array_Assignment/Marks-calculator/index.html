@@ -1,0 +1,61 @@
+<!-- Student Marks Calculator
+
+Description: Create a web app where users can input and calculate student marks. Use arrays to store marks and display the average, maximum, and minimum marks.
+
+Requirements:
+
+I
+
+Input student marks and store them in an array.
+
+Calculate and display the average, highest, and lowest marks.
+
+Provide a reset option to clear the array and inputs.
+
+HTML:
+
+Input field for marks.
+
+Buttons for "Add Marks," "Calculate," and "Reset."
+
+Display section for results.
+
+CSS
+
+Design the input form and result display with borders and color schemes. -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Marks Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h2>Student Marks Calculator</h2>
+
+        <!-- Input -->
+        <input type="number" id="marksInput" placeholder="Enter marks">
+
+        <!-- Buttons -->
+        <div class="buttons">
+            <button onclick="addMarks()">Add Marks</button>
+            <button onclick="calculate()">Calculate</button>
+            <button onclick="resetAll()">Reset</button>
+        </div>
+
+        <!-- Display -->
+        <div class="result">
+            <p id="marksList">Marks: </p>
+            <p id="average">Average: </p>
+            <p id="max">Highest: </p>
+            <p id="min">Lowest: </p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
