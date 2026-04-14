@@ -1,0 +1,77 @@
+.circle {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+#circle1 {
+    background-color: red;
+}
+
+#circle2 {
+    background-color: gray;
+}
+
+#circle3 {
+    background-color: black;
+}
+/* Card styling */
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Green background */
+.card-body {
+  background-color: #6bcd6e;
+  color: white;
+}
+
+/* Badge */
+.badge-car {
+  background-color: red;
+  padding: 5px 10px;
+  font-size: 12px;
+  border-radius: 5px;
+}
+
+/* Stars */
+.stars {
+  color: gold;
+}
+
+/* Color circles */
+.color{
+  width:25px;
+  height:25px;
+  border-radius:50%;
+  display:inline-block;
+  cursor:pointer;
+  margin:5px;
+}
+
+.red{ background:red; }
+.black{ background:black; }
+.gray{ background:gray; }
+
+
+/* Old price */
+.price-old {
+  text-decoration: line-through;
+  color: #ddd;
+  font-size: 14px;
+}
+
+/* Button */
+.btn-cart {
+  padding:10px 20px;
+  border:none;
+  color:white;
+  background:green;
+  cursor:pointer;
+}
+
+.btn-cart:hover {
+  background-color: darkred;
+}

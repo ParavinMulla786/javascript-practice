@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>DOM</title>
+
+  <!-- Correct CSS link -->
+  <link rel="stylesheet" href="style.css">
+
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="card" style="width: 18rem;">
+  
+<img id="carImage" src="https://via.placeholder.com/150" class="card-img-top">
+
+  <div class="card-body">
+    <span class="badge badge-car">CAR</span>
+  <h5 class="mt-2">Mercedes Benz C300 2022</h5>
+   <p class="mb-1">🚗 Mileage: 4,000 miles</p>
+    <p class="mb-1">⛽ Fuel: 25mpg</p>
+    <p class="mb-2">
+      Safety:
+      <span class="stars">★★★★★</span>
+    </p>
+
+    <p class="mb-1">Pick a color:</p>
+    <!-- Fixed classes -->
+    <div class="colors">
+      <div class="color red" data-color="red" data-img = "D:\Java-Script Practice\daily Lectures\DOM\Assests\black.png"></div>
+      <div class="color black" data-color="black" data-img = "./Assets/black.png"></div>
+      <div class="color gray" data-color="gray" data-img = "./Assets/gray.png"></div>
+    </div>
+
+    <div class="d-flex align-items-center mt-3">
+      <h5 class="me-2">$134,450</h5>
+      <span class="price-old">$140,500</span>
+    </div>
+
+   <button class="btn btn-cart mt-3 w-100">
+     Add to Cart
+    </button>
+  </div>
+</div>
+<script src ="Practice1.js"></script>
+
+</body>
+</html>
