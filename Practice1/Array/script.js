@@ -101,7 +101,7 @@ console.log(arr4);
 arr4.pop();
 console.log(arr4);
 
-
+//print first element
 for(i=0; i< arr4.length;i++){
     console.log(arr4[i]);
 }
