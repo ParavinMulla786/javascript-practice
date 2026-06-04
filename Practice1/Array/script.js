@@ -115,6 +115,8 @@ for (let j = 0; j < arr5.length; j++) {
     }
 }
 
+//odd number
+
 let arr6 = [10, 20, 30, 40];
 
 for (let k = 0; k < arr6.length; k++) {
@@ -122,3 +124,5 @@ for (let k = 0; k < arr6.length; k++) {
         console.log(arr6[k]);
     }
 }
+
+//
