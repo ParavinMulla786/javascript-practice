@@ -157,3 +157,4 @@ for (let q = 1; i < products.length; q++) {
 
 console.log("Highest Priced Product:", highestProduct.title);
 console.log("Price:", highestProduct.price);
+
