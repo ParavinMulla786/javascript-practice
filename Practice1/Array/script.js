@@ -79,7 +79,7 @@ console.log(removeDuplicates(arr2));
 
 let arr3 = [10, 20, 30, 40,50];
 
-
+//sum of array
 function sumofArray(arr3){
     let sum = 0;
 
